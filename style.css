@@ -1,0 +1,102 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 400px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  margin-bottom: 25px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2a5298;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1e3c72;
+}
+
+#resultado, #listaAdmin {
+  margin-top: 10px;
+  background: #f2f2f2;
+  padding: 10px;
+  border-radius: 6px;
+}
+table {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+th, td {
+  padding: 6px;
+}
+.admin-link {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #2a5298;
+  font-weight: bold;
+}
+.lateral {
+  position: fixed;
+  top: 0;
+  width: 25%; /* AUMENTO */
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.lateral img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out; /* SUAVIDADE */
+}
+
+.lateral img.ativa {
+  opacity: 0.9;
+}
+
+.esquerda { left: 0; }
+.direita { right: 0; }
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
