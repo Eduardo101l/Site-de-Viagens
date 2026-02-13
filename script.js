@@ -22,6 +22,13 @@ if (form) {
     form.reset();
   });
 }
+const btnAdmin = document.getElementById("btnAdmin");
+
+if (btnAdmin) {
+  btnAdmin.addEventListener("click", function() {
+    window.location.href = "admin.html";
+  });
+}
 
 function ativarAdmin() {
   const senha = document.getElementById("senhaAdmin").value;
@@ -80,21 +87,7 @@ function excluir(index) {
   localStorage.setItem("passageiros", JSON.stringify(passageiros));
   mostrarListaAdmin();
 }
-// --- ACESSO SECRETO AO ADMIN ---
-let segredo = "";
 
-document.addEventListener("keydown", function(e) {
-  segredo += e.key.toLowerCase();
-
-  if (segredo.includes("admin123")) {
-    window.location.href = "admin.html";
-  }
-
-  // evita string gigante
-  if (segredo.length > 20) {
-    segredo = segredo.slice(-20);
-  }
-});
 // --- SLIDES LATERAIS SUAVES ---
 
 const imagens = [
